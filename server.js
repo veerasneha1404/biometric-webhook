@@ -11,7 +11,7 @@ const supabase = createClient(
 );
 
 // Webhook endpoint
-app.post("/webhook", async (req, res) => {
+app.post(["/", "/webhook"], async (req, res) => {
   try {
     const data = req.body;
 
